@@ -1,0 +1,121 @@
+/**
+ * Blink
+ * Making the LED on the controller board blink
+ */
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  //digital lights are on/off,, analog lights are fractional
+ 
+}
+
+void dit() {
+  // put your main code here, to run repeatedly:
+  //digital lights are on/off,, analog lights are fractional
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(75);
+  digitalWrite(LED_BUILTIN, LOW);
+}
+
+void dah() {
+  // put your main code here, to run repeatedly:
+  //digital lights are on/off,, analog lights are fractional
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(225);
+  digitalWrite(LED_BUILTIN, LOW);
+}
+
+void interSpace() {
+   delay(225);
+}
+
+void intraSpace() {
+   delay(75);
+}
+
+void wordSpace() {
+   delay(525);
+}
+
+void dChar() {
+  dah();
+  intraSpace();
+  dit();
+  intraSpace();
+  dit();
+}
+void eChar() {
+  dit();
+}
+void hChar() {
+  dit();
+  intraSpace();
+  dit();
+  intraSpace();
+  dit();
+  intraSpace();
+  dit();
+}
+void lChar() {
+  dit();
+  intraSpace();
+  dit();
+  intraSpace();
+  dah();
+  intraSpace();
+  dit();
+}
+void oChar() {
+  dah();
+  intraSpace();
+  dah();
+  intraSpace();
+  dah();
+}
+void rChar() {
+  dit();
+  intraSpace();
+  dah();
+  intraSpace();
+  dit();
+}
+void wChar() {
+  dit();
+  intraSpace();
+  dah();
+  intraSpace();
+  dah();
+}
+
+//LED_BUILTIN refers to the pin number (aka #13)
+void setup() {
+  // put your setup code here, to run once:
+  //output for the pins on the controller
+  pinMode(LED_BUILTIN, OUTPUT);
+  delay(1000);
+  
+  hChar();
+  interSpace();
+  eChar();
+  interSpace();
+  lChar();
+  interSpace();
+  lChar();
+  interSpace();
+  oChar();
+
+  wordSpace();
+
+  wChar();
+  interSpace();
+  oChar();
+  interSpace();
+  rChar();
+  interSpace();
+  lChar();
+  interSpace();
+  dChar();
+  wordSpace();
+   
+  
+}
